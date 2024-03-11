@@ -1,20 +1,24 @@
 package com.jciterceros.LocadoraCarrosJPA.dto;
 
+import com.jciterceros.LocadoraCarrosJPA.entities.Fabricante;
 import com.jciterceros.LocadoraCarrosJPA.entities.Modelo;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class ModeloDTO {
     private Long id;
     private String nome;
-    //private FabricanteDTO fabricante;
+    private Fabricante fabricante;
 
-    public ModeloDTO(Modelo modelo) {
+    public ModeloDTO() {
     }
 
-    public ModeloDTO(ModeloDTO modeloDTO) {
-        this.id = modeloDTO.getId();
-        this.nome = modeloDTO.getNome();
-        //this.fabricante.setId(fabricante.getId());
-        //this.fabricante.setNome(fabricante.getNome());
+    public ModeloDTO(Modelo modelo) {
+        this.id = modelo.getId();
+        this.nome = modelo.getNome();
+        this.fabricante = modelo.getFabricante();
+
     }
 
     public Long getId() {
@@ -33,11 +37,9 @@ public class ModeloDTO {
         this.nome = nome;
     }
 
-//    public FabricanteDTO getFabricante() {
-//        return fabricante;
-//    }
-//
-//    public void setFabricante(FabricanteDTO fabricante) {
-//        this.fabricante = fabricante;
-//    }
+    public String getFabricante() {
+        return fabricante.getId() + " - " + fabricante.getNome();
+    }
+
+
 }

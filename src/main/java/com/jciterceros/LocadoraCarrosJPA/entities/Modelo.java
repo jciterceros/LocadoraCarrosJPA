@@ -51,6 +51,10 @@ public class Modelo {
         return fabricante;
     }
 
+    public void setFabricante(Fabricante fabricante) {
+        this.fabricante = fabricante;
+    }
+
     public Set<Carro> getCarro() {
         return carro;
     }
