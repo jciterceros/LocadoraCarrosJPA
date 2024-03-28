@@ -67,6 +67,6 @@ public class ModeloService {
     private void copyDtoToEntity(ModeloDTO dto, Modelo entity)
     {
         entity.setNome(dto.getNome());
-        //entity.setFabricante(dto.getFabricante());
+        entity.setFabricante(dto.getId(), dto.getNome());
     }
 }

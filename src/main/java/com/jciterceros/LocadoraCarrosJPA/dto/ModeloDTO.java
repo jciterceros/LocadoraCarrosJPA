@@ -3,9 +3,6 @@ package com.jciterceros.LocadoraCarrosJPA.dto;
 import com.jciterceros.LocadoraCarrosJPA.entities.Fabricante;
 import com.jciterceros.LocadoraCarrosJPA.entities.Modelo;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class ModeloDTO {
     private Long id;
     private String nome;
@@ -42,4 +39,12 @@ public class ModeloDTO {
     }
 
 
+//    public Fabricante getFabricante() {
+//        return fabricante;
+//    }
+
+    public void setFabricante(Long id, String nome) {
+        this.fabricante.setId(id);
+        this.fabricante.setNome(nome);
+    }
 }

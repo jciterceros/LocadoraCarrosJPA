@@ -51,8 +51,10 @@ public class Modelo {
         return fabricante;
     }
 
-    public void setFabricante(Fabricante fabricante) {
-        this.fabricante = fabricante;
+    public void setFabricante(Long id, String nome){//(Fabricante fabricante) {
+        //this.fabricante = fabricante;
+        this.fabricante.setId(id);
+        this.fabricante.setNome(nome);
     }
 
     public Set<Carro> getCarro() {
