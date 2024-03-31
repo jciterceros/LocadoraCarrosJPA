@@ -9,5 +9,5 @@
 
 <p align="center">
     <a href="https://github.com/jciterceros/LocadoraCarrosJPA" target="blank">Qualidade do Codigo</a><br/>
-    <img src="https://github.com/jciterceros/LocadoraCarrosJPA/blob/a44d99a240b5e1e61884e533a00f008323d93e69/src/main/java/com/jciterceros/LocadoraCarrosJPA/assets/resume_quality.PNG" width="200" alt="SonarQube Resume" />
+    <img src="https://github.com/jciterceros/LocadoraCarrosJPA/blob/a44d99a240b5e1e61884e533a00f008323d93e69/src/main/java/com/jciterceros/LocadoraCarrosJPA/assets/resume_quality.PNG" width="950" alt="SonarQube Resume" />
 </p>
