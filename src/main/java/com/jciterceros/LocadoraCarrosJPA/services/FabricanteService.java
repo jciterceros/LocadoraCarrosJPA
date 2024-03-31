@@ -14,13 +14,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FabricanteService {
-    @Autowired
+
     private FabricanteRepository fabricanteRepository;
 
-    // find all fabricantes
+    @Autowired
+    public FabricanteService(FabricanteRepository fabricanteRepository) {
+        this.fabricanteRepository = fabricanteRepository;
+    }
+
     @Transactional(readOnly = true)
     public List<FabricanteDTO> findAll() {
         List<FabricanteDTO> fabricanteDTOList = new ArrayList<>();
@@ -31,18 +36,16 @@ public class FabricanteService {
         return fabricanteDTOList;
     }
 
-    // find fabricante by id
     @Transactional(readOnly = true)
     public FabricanteDTO findById(Long id) {
-        if (!fabricanteRepository.existsById(id)) {
+        Optional<Fabricante> optionalFabricante = fabricanteRepository.findById(id);
+        if (!optionalFabricante.isPresent()) {
             throw new ResourceNotFoundException("ID do Fabricante não encontrado");
         }
-        Fabricante entity = fabricanteRepository.findById(id).get();
-        FabricanteDTO dto = new FabricanteDTO(entity);
-        return dto;
+        Fabricante entity = optionalFabricante.get();
+        return new FabricanteDTO(entity);
     }
 
-    // insert fabricante
     @Transactional(readOnly = false)
     public FabricanteDTO insert(FabricanteDTO fabricanteDTO) {
         Fabricante entity = new Fabricante();
@@ -51,21 +54,18 @@ public class FabricanteService {
         return new FabricanteDTO(entity);
     }
 
-    // update fabricante
     @Transactional(readOnly = false)
     public FabricanteDTO update(Long id, FabricanteDTO fabricanteDTO) {
         try {
-            Fabricante entity = fabricanteRepository.getReferenceById(id);//getOne(id);
+            Fabricante entity = fabricanteRepository.getReferenceById(id);
             copyDtoToEntity(fabricanteDTO, entity);
             entity = fabricanteRepository.save(entity);
             return new FabricanteDTO(entity);
         } catch (EntityNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
             throw new ResourceNotFoundException("Id " + id + " não encontrado ");
         }
     }
 
-    // delete fabricante
     @Transactional(readOnly = false, propagation = Propagation.SUPPORTS)
     public void delete(Long id) {
         if (!fabricanteRepository.existsById(id)) {
@@ -74,7 +74,6 @@ public class FabricanteService {
         try {
             fabricanteRepository.deleteById(id);
         } catch (DataIntegrityViolationException e) {
-            System.out.println("Error: " + e.getMessage());
             throw new DatabaseException("Não é possível excluir um fabricante que possui carros");
         }
     }

@@ -9,14 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/modelos")
 public class ModeloController {
 
-    @Autowired
     private ModeloService modeloService;
+
+    @Autowired
+    public ModeloController(ModeloService modeloService) {
+        this.modeloService = modeloService;
+    }
 
     // find all modelos
     @GetMapping()

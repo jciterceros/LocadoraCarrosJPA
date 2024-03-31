@@ -11,8 +11,13 @@ import java.util.List;
 @RequestMapping(value = "/fabricantes")
 public class FabricanteController {
 
-    @Autowired
+
     private FabricanteService fabricanteService;
+
+    @Autowired
+    public FabricanteController(FabricanteService fabricanteService) {
+        this.fabricanteService = fabricanteService;
+    }
 
     // find all fabricantes
     @GetMapping()
@@ -29,14 +34,12 @@ public class FabricanteController {
     // save fabricante
     @PostMapping()
     public FabricanteDTO insert(@RequestBody FabricanteDTO fabricanteDTO) {
-        System.out.println(fabricanteDTO.toString());
         return fabricanteService.insert(fabricanteDTO);
     }
 
     // update fabricante
     @PutMapping(value = "/{id}")
     public FabricanteDTO update(@PathVariable Long id, @RequestBody FabricanteDTO fabricanteDTO) {
-        System.out.println(fabricanteDTO.toString());
         return fabricanteService.update(id, fabricanteDTO);
     }
 

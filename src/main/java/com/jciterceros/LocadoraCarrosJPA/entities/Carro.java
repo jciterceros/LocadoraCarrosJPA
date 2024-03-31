@@ -21,8 +21,6 @@ public class Carro {
     @Column(columnDefinition = "DOUBLE PRECISION DEFAULT 12.2 NOT NULL")
     private Double valorLocacao;
 
-//    private Long idFabricante;
-
     @ManyToOne
     @JoinColumn(name = "id_fabricante")
     private Fabricante fabricante;
@@ -34,7 +32,7 @@ public class Carro {
     public Carro() {
     }
 
-    public Carro(Long idFabricante, Long idModelo, String placa, String cor, Boolean disponivel, Integer ano, Double valorlocacao) {
+    public Carro(String placa, String cor, Boolean disponivel, Integer ano, Double valorlocacao) {
         this.placa = placa;
         this.cor = cor;
         this.disponivel = disponivel;
