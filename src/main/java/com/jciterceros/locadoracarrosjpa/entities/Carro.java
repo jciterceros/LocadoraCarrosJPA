@@ -1,16 +1,14 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Table(name = "tb_carro")
 public class Carro {
     @Id
@@ -43,15 +41,4 @@ public class Carro {
         return modelo;
     }
 
-    @Override
-    public String toString() {
-        return "Carro{" +
-                "id=" + id +
-                ", placa='" + placa + '\'' +
-                ", cor='" + cor + '\'' +
-                ", disponivel=" + disponivel +
-                ", ano=" + ano +
-                ", valorLocacao=" + valorLocacao +
-                '}';
-    }
 }

@@ -1,26 +1,17 @@
 package com.jciterceros.locadoracarrosjpa.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class FabricanteDTO {
     private Long id;
+
+//    @JsonIgnore
     private String nome;
 
-    public FabricanteDTO(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
-
-    @Override
-    public String toString() {
-        return "FabricanteDTO{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
-    }
 }

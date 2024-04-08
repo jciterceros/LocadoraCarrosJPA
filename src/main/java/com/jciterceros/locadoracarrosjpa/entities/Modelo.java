@@ -1,10 +1,7 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,6 +11,8 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
+@ToString(exclude = {"fabricante","carro"})
 @Table(name = "tb_modelo")
 public class Modelo {
 
@@ -29,14 +28,4 @@ public class Modelo {
 
     @OneToMany(mappedBy = "modelo", cascade = CascadeType.ALL)
     private Set<Carro> carro = new HashSet<>();
-
-    @Override
-    public String toString() {
-        return "Modelo{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", fabricante=" + fabricante +
-                ", carro=" + carro +
-                '}';
-    }
 }
