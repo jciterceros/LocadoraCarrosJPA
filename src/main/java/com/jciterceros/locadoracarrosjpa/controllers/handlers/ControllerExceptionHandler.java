@@ -1,10 +1,10 @@
-package com.jciterceros.LocadoraCarrosJPA.controllers.handlers;
+package com.jciterceros.locadoracarrosjpa.controllers.handlers;
 
 
-import com.jciterceros.LocadoraCarrosJPA.dto.CustomErrorDTO;
-import com.jciterceros.LocadoraCarrosJPA.dto.ValidationErrorDTO;
-import com.jciterceros.LocadoraCarrosJPA.services.exceptions.DatabaseException;
-import com.jciterceros.LocadoraCarrosJPA.services.exceptions.ResourceNotFoundException;
+import com.jciterceros.locadoracarrosjpa.dto.CustomErrorDTO;
+import com.jciterceros.locadoracarrosjpa.dto.ValidationErrorDTO;
+import com.jciterceros.locadoracarrosjpa.services.exceptions.DatabaseException;
+import com.jciterceros.locadoracarrosjpa.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

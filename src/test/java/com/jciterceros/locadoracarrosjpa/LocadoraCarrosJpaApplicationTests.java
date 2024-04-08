@@ -1,4 +1,4 @@
-package com.jciterceros.LocadoraCarrosJPA;
+package com.jciterceros.locadoracarrosjpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

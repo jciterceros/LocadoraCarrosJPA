@@ -1,4 +1,4 @@
-package com.jciterceros.LocadoraCarrosJPA;
+package com.jciterceros.locadoracarrosjpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.jciterceros.LocadoraCarrosJPA.services.exceptions;
+package com.jciterceros.locadoracarrosjpa.services.exceptions;
 
 @SuppressWarnings("serial")
 public class ResourceNotFoundException extends RuntimeException {

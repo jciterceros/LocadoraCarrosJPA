@@ -1,4 +1,4 @@
-package com.jciterceros.LocadoraCarrosJPA.dto;
+package com.jciterceros.locadoracarrosjpa.dto;
 
 import java.time.Instant;
 

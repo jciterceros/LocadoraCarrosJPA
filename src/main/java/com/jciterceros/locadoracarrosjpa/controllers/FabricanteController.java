@@ -1,7 +1,7 @@
-package com.jciterceros.LocadoraCarrosJPA.controllers;
+package com.jciterceros.locadoracarrosjpa.controllers;
 
-import com.jciterceros.LocadoraCarrosJPA.dto.FabricanteDTO;
-import com.jciterceros.LocadoraCarrosJPA.services.FabricanteService;
+import com.jciterceros.locadoracarrosjpa.dto.FabricanteDTO;
+import com.jciterceros.locadoracarrosjpa.services.FabricanteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,6 @@ import java.util.List;
 @RequestMapping(value = "/fabricantes")
 public class FabricanteController {
 
-
     private FabricanteService fabricanteService;
 
     @Autowired
@@ -19,31 +18,26 @@ public class FabricanteController {
         this.fabricanteService = fabricanteService;
     }
 
-    // find all fabricantes
     @GetMapping()
     public List<FabricanteDTO> findAll() {
         return fabricanteService.findAll();
     }
 
-    // find fabricante by id
     @GetMapping(value = "/{id}")
     public FabricanteDTO findById(@PathVariable Long id) {
         return fabricanteService.findById(id);
     }
 
-    // save fabricante
     @PostMapping()
     public FabricanteDTO insert(@RequestBody FabricanteDTO fabricanteDTO) {
         return fabricanteService.insert(fabricanteDTO);
     }
 
-    // update fabricante
     @PutMapping(value = "/{id}")
     public FabricanteDTO update(@PathVariable Long id, @RequestBody FabricanteDTO fabricanteDTO) {
         return fabricanteService.update(id, fabricanteDTO);
     }
 
-    // delete fabricante
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable Long id) {
         fabricanteService.delete(id);
