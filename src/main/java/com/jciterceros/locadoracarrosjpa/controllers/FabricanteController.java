@@ -19,7 +19,7 @@ public class FabricanteController {
     private final FabricanteService fabricanteService;
 
     @Autowired
-    public FabricanteController(FabricanteService fabricanteService,ModelMapper mapper) {
+    public FabricanteController(FabricanteService fabricanteService, ModelMapper mapper) {
         this.fabricanteService = fabricanteService;
         this.mapper = mapper;
     }
@@ -47,12 +47,12 @@ public class FabricanteController {
                 .path("/{id}")
                 .buildAndExpand(id)
                 .toUri();
-        return ResponseEntity.created(location).body(fabricanteService.findById(id));
+        return ResponseEntity.created(location).body(mapper.map(fabricanteService.findById(id), FabricanteDTO.class));
     }
 
     @PutMapping(value = "/{id}")
     public ResponseEntity<FabricanteDTO> update(@PathVariable Long id, @RequestBody FabricanteDTO fabricanteDTO) {
-        return ResponseEntity.ok(fabricanteService.update(id, fabricanteDTO));
+        return ResponseEntity.ok().body(mapper.map(fabricanteService.update(id, fabricanteDTO), FabricanteDTO.class));
     }
 
     @DeleteMapping(value = "/{id}")

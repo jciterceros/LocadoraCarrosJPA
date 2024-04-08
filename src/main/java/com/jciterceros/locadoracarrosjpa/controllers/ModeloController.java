@@ -26,12 +26,17 @@ public class ModeloController {
 
     @GetMapping()
     public ResponseEntity<List<ModeloDTO>> findAll() {
-        return ResponseEntity.ok().body(modeloService.findAll());
+        List<ModeloDTO> modeloDTOs = modeloService.findAll()
+                .stream()
+                .map(modelo -> mapper.map(modelo, ModeloDTO.class))
+                .toList();
+
+        return ResponseEntity.ok().body(modeloDTOs);
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ModeloDTO> findById(@PathVariable Long id) {
-        return ResponseEntity.ok().body(modeloService.findById(id));
+        return ResponseEntity.ok().body(mapper.map(modeloService.findById(id), ModeloDTO.class));
     }
 
     // Insert
@@ -43,13 +48,13 @@ public class ModeloController {
                 .path("/{id}")
                 .buildAndExpand(id)
                 .toUri();
-        return ResponseEntity.created(location).body(modeloService.findById(id));
+        return ResponseEntity.created(location).body(mapper.map(modeloService.findById(id), ModeloDTO.class));
     }
 
     // Update
     @PutMapping(value = "/{id}")
     public ResponseEntity<ModeloDTO> update(@PathVariable Long id, @RequestBody ModeloDTO modeloDTO) {
-        return ResponseEntity.ok().body(modeloService.update(id, modeloDTO));
+        return ResponseEntity.ok().body(mapper.map(modeloService.update(id, modeloDTO), ModeloDTO.class));
     }
 
     // Delete
