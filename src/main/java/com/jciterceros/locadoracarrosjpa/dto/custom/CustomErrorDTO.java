@@ -1,4 +1,4 @@
-package com.jciterceros.locadoracarrosjpa.dto;
+package com.jciterceros.locadoracarrosjpa.dto.custom;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

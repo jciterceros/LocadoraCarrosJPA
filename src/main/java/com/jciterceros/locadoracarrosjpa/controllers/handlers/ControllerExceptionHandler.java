@@ -1,8 +1,8 @@
 package com.jciterceros.locadoracarrosjpa.controllers.handlers;
 
 
-import com.jciterceros.locadoracarrosjpa.dto.CustomErrorDTO;
-import com.jciterceros.locadoracarrosjpa.dto.ValidationErrorDTO;
+import com.jciterceros.locadoracarrosjpa.dto.custom.CustomErrorDTO;
+import com.jciterceros.locadoracarrosjpa.dto.custom.ValidationErrorDTO;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.DatabaseException;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;

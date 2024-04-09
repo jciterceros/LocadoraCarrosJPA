@@ -1,4 +1,4 @@
-package com.jciterceros.locadoracarrosjpa.dto;
+package com.jciterceros.locadoracarrosjpa.dto.custom;
 
 import java.time.Instant;
 import java.util.ArrayList;

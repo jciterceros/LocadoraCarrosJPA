@@ -54,7 +54,7 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private Set<Clientetelefone> clienteClientetelefones;
 
-//    @OneToMany(mappedBy = "cliente")
-//    private Set<Locacao> clienteLocacaos;
+    @OneToMany(mappedBy = "cliente")
+    private Set<Locacao> clienteLocacaos;
 
 }
