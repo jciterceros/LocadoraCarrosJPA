@@ -26,17 +26,12 @@ public class FabricanteController {
 
     @GetMapping()
     public ResponseEntity<List<FabricanteDTO>> findAll() {
-        List<FabricanteDTO> fabricanteDTOs = fabricanteService.findAll()
-                .stream()
-                .map(fabricante -> mapper.map(fabricante, FabricanteDTO.class))
-                .toList();
-
-        return ResponseEntity.ok().body(fabricanteDTOs);
+        return ResponseEntity.ok().body(fabricanteService.findAll());
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<FabricanteDTO> findById(@PathVariable Long id) {
-        return ResponseEntity.ok().body(mapper.map(fabricanteService.findById(id), FabricanteDTO.class));
+        return ResponseEntity.ok().body(fabricanteService.findById(id));
     }
 
     @PostMapping()
@@ -47,12 +42,14 @@ public class FabricanteController {
                 .path("/{id}")
                 .buildAndExpand(id)
                 .toUri();
-        return ResponseEntity.created(location).body(mapper.map(fabricanteService.findById(id), FabricanteDTO.class));
+        //return ResponseEntity.created(location).body(mapper.map(fabricanteService.findById(id), FabricanteDTO.class));
+        return ResponseEntity.created(location).body(fabricanteService.findById(id));
     }
 
     @PutMapping(value = "/{id}")
     public ResponseEntity<FabricanteDTO> update(@PathVariable Long id, @RequestBody FabricanteDTO fabricanteDTO) {
-        return ResponseEntity.ok().body(mapper.map(fabricanteService.update(id, fabricanteDTO), FabricanteDTO.class));
+//        return ResponseEntity.ok().body(mapper.map(fabricanteService.update(id, fabricanteDTO), FabricanteDTO.class));
+        return ResponseEntity.ok().body(fabricanteService.update(id, fabricanteDTO));
     }
 
     @DeleteMapping(value = "/{id}")
