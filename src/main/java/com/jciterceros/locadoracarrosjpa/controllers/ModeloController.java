@@ -26,29 +26,25 @@ public class ModeloController {
 
     @GetMapping()
     public ResponseEntity<List<ModeloDTO>> findAll() {
-        List<ModeloDTO> modeloDTOs = modeloService.findAll()
-                .stream()
-                .map(modelo -> mapper.map(modelo, ModeloDTO.class))
-                .toList();
-
-        return ResponseEntity.ok().body(modeloDTOs);
+        return ResponseEntity.ok().body(modeloService.findAll());
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ModeloDTO> findById(@PathVariable Long id) {
-        return ResponseEntity.ok().body(mapper.map(modeloService.findById(id), ModeloDTO.class));
+        return ResponseEntity.ok().body(modeloService.findById(id));
     }
 
     // Insert
     @PostMapping()
     public ResponseEntity<ModeloDTO> insert(@RequestBody ModeloDTO modeloDTO) {
-        Long id = modeloService.insert(modeloDTO).getId();
+        ModeloDTO entityDTO = modeloService.insert(modeloDTO);
+        Long id = entityDTO.getId();
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(id)
                 .toUri();
-        return ResponseEntity.created(location).body(mapper.map(modeloService.findById(id), ModeloDTO.class));
+        return ResponseEntity.created(location).body(entityDTO);
     }
 
     // Update
