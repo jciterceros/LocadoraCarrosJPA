@@ -2,7 +2,6 @@ package com.jciterceros.locadoracarrosjpa.controllers;
 
 import com.jciterceros.locadoracarrosjpa.dto.ModeloDTO;
 import com.jciterceros.locadoracarrosjpa.services.ModeloService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +14,11 @@ import java.util.List;
 @RequestMapping(value = "/modelos")
 public class ModeloController {
 
-    private final ModelMapper mapper;
     private final ModeloService modeloService;
 
     @Autowired
-    public ModeloController(ModeloService modeloService, ModelMapper mapper) {
+    public ModeloController(ModeloService modeloService) {
         this.modeloService = modeloService;
-        this.mapper = mapper;
     }
 
     @GetMapping()
@@ -50,7 +47,7 @@ public class ModeloController {
     // Update
     @PutMapping(value = "/{id}")
     public ResponseEntity<ModeloDTO> update(@PathVariable Long id, @RequestBody ModeloDTO modeloDTO) {
-        return ResponseEntity.ok().body(mapper.map(modeloService.update(id, modeloDTO), ModeloDTO.class));
+        return ResponseEntity.ok().body(modeloService.update(id, modeloDTO));
     }
 
     // Delete

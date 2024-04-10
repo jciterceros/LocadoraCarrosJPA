@@ -1,6 +1,7 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode
 @ToString(exclude = {"fabricante","carro"})
 @Table(name = "tb_modelo")
 public class Modelo {
