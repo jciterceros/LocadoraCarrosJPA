@@ -54,19 +54,19 @@ public class ModeloService {
     }
 
     @Transactional(readOnly = false)
-    public ModeloDTO insert(ModeloDTO modelo) {
+    public ModeloDTO insert(ModeloDTO modeloDTO) {
 
-        Fabricante fabricante = fabricanteRepository.findById(modelo.getId_fabricante())
+        Fabricante fabricante = fabricanteRepository.findById(modeloDTO.getId_fabricante())
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Fabricante não encontrado"));
 
-        boolean exists = modeloRepository.existsByNomeAndFabricanteId(modelo.getNome(), modelo.getId_fabricante());
+        boolean exists = modeloRepository.existsByNomeAndFabricanteId(modeloDTO.getNome(), modeloDTO.getId_fabricante());
         if (exists) {
             throw new DatabaseException("Modelo já existe para esse fabricante");
         }
         configureMapper();
 
         Modelo entity = new Modelo();
-        entity.setNome(modelo.getNome());
+        entity.setNome(modeloDTO.getNome());
         entity.setFabricante(fabricante);
 
         return mapper.map(modeloRepository.save(entity), ModeloDTO.class);

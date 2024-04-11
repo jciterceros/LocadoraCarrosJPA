@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -26,11 +28,11 @@ public class Carro {
     @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
     private Boolean disponivel;
 
-    @Column(nullable = false)
-    private Integer ano;
-
     @Column(nullable = false, precision = 14, scale = 2)
     private BigDecimal valorLocacao;
+
+    @Column(nullable = false)
+    private Integer ano;
 
     @ManyToOne
     @JoinColumn(name = "id_fabricante")
@@ -40,12 +42,7 @@ public class Carro {
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
 
-//    public Fabricante getFabricante() {
-//        return fabricante;
-//    }
-//
-//    public Modelo getModelo() {
-//        return modelo;
-//    }
+    @OneToMany(mappedBy = "carro",cascade = CascadeType.ALL)
+    private Set<Locacao> locacoes;
 
 }

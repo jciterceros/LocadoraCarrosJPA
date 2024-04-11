@@ -1,1 +1,5 @@
+Identificação do projeto: LocadoraCarrosJPA SalaDeReuniao
 mvn clean verify sonar:sonar   -Dsonar.projectKey=LocadoraCarrosJPA   -Dsonar.projectName='LocadoraCarrosJPA'   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_729770b6351d3971764b6fbd81ec2b176ae025ba
+
+Identificação do projeto: LocadoraCarrosJPA VRSoftware
+mvn clean verify sonar:sonar   -Dsonar.projectKey=LocadoraCarrosJPA   -Dsonar.projectName='LocadoraCarrosJPA'   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_fbafc49442e2545a4becb0089ec954e6e50b3fc3
