@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface SeguradoratelefoneRepository extends JpaRepository<Seguradoratelefone, Long> {
+    boolean existsBySeguradoraId(Long id);
 }

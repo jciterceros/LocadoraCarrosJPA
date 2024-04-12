@@ -1,10 +1,8 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.Set;
 
 @Entity
@@ -12,6 +10,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"estadoMunicipios", "estadoClientes", "estadoSeguradoras"})
 @Table(name = "tb_estado")
 public class Estado {
 

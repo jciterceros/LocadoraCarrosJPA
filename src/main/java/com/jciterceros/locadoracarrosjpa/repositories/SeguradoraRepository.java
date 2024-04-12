@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public interface SeguradoraRepository extends JpaRepository<Seguradora, Long> {
-    List<Seguradora> findByMunicipioId(Long id);
-
+    boolean existsByCnpj(String cnpj);
     boolean existsByMunicipioId(Long id);
+
 }
