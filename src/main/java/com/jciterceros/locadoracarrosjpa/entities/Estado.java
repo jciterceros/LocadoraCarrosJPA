@@ -26,13 +26,13 @@ public class Estado {
     @Column(nullable = false, length = 2)
     private String sigla;
 
-    @OneToMany(mappedBy = "estado")
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
     private Set<Municipio> estadoMunicipios;
 
-    @OneToMany(mappedBy = "estado")
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
     private Set<Cliente> estadoClientes;
 
-    @OneToMany(mappedBy = "estado")
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
     private Set<Seguradora> estadoSeguradoras;
 
 }

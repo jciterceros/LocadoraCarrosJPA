@@ -1,10 +1,7 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Set;
 
@@ -13,6 +10,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"municipioClientes", "municipioSeguradoras"})
 @Table(name = "tb_municipio")
 public class Municipio {
 
@@ -28,10 +26,10 @@ public class Municipio {
     @JoinColumn(name = "id_estado", nullable = false)
     private Estado estado;
 
-    @OneToMany(mappedBy = "municipio")
+    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL)
     private Set<Cliente> municipioClientes;
 
-    @OneToMany(mappedBy = "municipio")
+    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL)
     private Set<Seguradora> municipioSeguradoras;
 
 }
