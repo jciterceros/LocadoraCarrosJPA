@@ -11,7 +11,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/seguradoratelefone")
+@RequestMapping(value = "/seguradoratelefones")
 public class SeguradoratelefoneController {
 
     private final SeguradoratelefoneService seguradoratelefoneService;
