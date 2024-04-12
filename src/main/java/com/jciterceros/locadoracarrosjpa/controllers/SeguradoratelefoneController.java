@@ -44,4 +44,17 @@ public class SeguradoratelefoneController {
                 .toUri();
         return ResponseEntity.created(location).body(entityDTO);
     }
+
+    // Update
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<SeguradoratelefoneDTO> update(@PathVariable Long id, @RequestBody SeguradoratelefoneDTO seguradoratelefoneDTO) {
+        return ResponseEntity.ok().body(seguradoratelefoneService.update(id, seguradoratelefoneDTO));
+    }
+
+    // Delete
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        seguradoratelefoneService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

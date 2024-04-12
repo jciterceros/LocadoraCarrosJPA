@@ -78,6 +78,37 @@ public class SeguradoratelefoneService {
         return mapper.map(seguradoratelefone, SeguradoratelefoneDTO.class);
     }
 
+    @Transactional(readOnly = false)
+    public SeguradoratelefoneDTO update(Long id, SeguradoratelefoneDTO seguradoratelefoneDTO) {
+        if (seguradoratelefoneDTO == null) {
+            throw new ResourceNotFoundException("DTO de Seguradoratelefone não pode ser nulo");
+        }
+
+        Long seguradoraId = seguradoratelefoneDTO.getId_seguradora();
+        if (seguradoraId == null) {
+            throw new ResourceNotFoundException("ID da Seguradora não pode ser nulo");
+        }
+
+        Seguradora seguradora = seguradoraRepository.findById(seguradoratelefoneDTO.getId_seguradora())
+                .orElseThrow(() -> new DatabaseException("ID da Seguradora não encontrado"));
+
+        Seguradoratelefone seguradoratelefone = seguradoratelefoneRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("ID do Seguradoratelefone não encontrado"));
+
+        seguradoratelefone.setTelefone(seguradoratelefoneDTO.getTelefone());
+        seguradoratelefone.setSeguradora(seguradora);
+
+        seguradoratelefone = seguradoratelefoneRepository.save(seguradoratelefone);
+        return mapper.map(seguradoratelefone, SeguradoratelefoneDTO.class);
+    }
+
+    @Transactional(readOnly = false)
+    public void delete(Long id) {
+        Seguradoratelefone seguradoratelefone = seguradoratelefoneRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("ID do Seguradoratelefone não encontrado"));
+        seguradoratelefoneRepository.delete(seguradoratelefone);
+    }
+
     private void configureMapper() {
         if (Boolean.TRUE.equals(mapperAllreadyConfigured)) return;
         mapper.addMappings(new PropertyMap<Seguradoratelefone, SeguradoratelefoneDTO>() {
