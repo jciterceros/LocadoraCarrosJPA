@@ -1,10 +1,7 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -14,11 +11,11 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"clienteClientetelefones", "clienteLocacoes"})
 @Table(name = "tb_cliente")
 public class Cliente {
 
     @Id
-    @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -51,10 +48,10 @@ public class Cliente {
     @JoinColumn(name = "id_municipio", nullable = false)
     private Municipio municipio;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private Set<Clientetelefone> clienteClientetelefones;
 
-    @OneToMany(mappedBy = "cliente")
-    private Set<Locacao> clienteLocacaos;
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private Set<Locacao> clienteLocacoes;
 
 }

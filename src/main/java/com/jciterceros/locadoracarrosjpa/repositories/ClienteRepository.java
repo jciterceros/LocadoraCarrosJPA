@@ -7,6 +7,8 @@ import java.util.List;
 
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+    boolean existsByCpf(String cpf);
+
     List<Cliente> findByMunicipioId(Long id);
 
     boolean existsByMunicipioId(Long id);
