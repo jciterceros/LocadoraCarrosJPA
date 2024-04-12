@@ -39,10 +39,10 @@ public class Seguradora {
     @JoinColumn(name = "id_municipio", nullable = false)
     private Municipio municipio;
 
-    @OneToMany(mappedBy = "seguradora")
+    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL)
     private Set<Seguradoratelefone> seguradoraSeguradoratelefones;
 
-    @OneToMany(mappedBy = "seguradora")
+    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL)
     private Set<Locacao> seguradoraLocacoes;
 
 }
