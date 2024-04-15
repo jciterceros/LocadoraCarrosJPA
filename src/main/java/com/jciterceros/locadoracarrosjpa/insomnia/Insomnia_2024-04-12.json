@@ -1,1 +1,1706 @@
-{"_type":"export","__export_format":4,"__export_date":"2024-04-12T20:00:50.264Z","__export_source":"insomnia.desktop.app:v2023.5.8","resources":[{"_id":"req_88516150388543af983d83ca4f49fa01","parentId":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","modified":1710124787576,"created":1710091315750,"url":"{{ _.localhost }}/fabricantes","name":"Fabricantes - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1710124770234,"created":1710124770234,"name":"Fabricantes","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1710124770234,"_type":"request_group"},{"_id":"wrk_dd0f82f719de48559edc7b54f47298e5","parentId":null,"modified":1710091312106,"created":1710091312106,"name":"LocadoraCarrosJPA","description":"","scope":"collection","_type":"workspace"},{"_id":"req_4c6b3bff7e294cdb97dcb24981a9450d","parentId":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","modified":1712593714069,"created":1710094349299,"url":"{{ _.localhost }}/fabricantes/1","name":"Fabricantes - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_4f1b5918f62247c8b84e66249cd1c521","parentId":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","modified":1712707721798,"created":1710094503070,"url":"{{ _.localhost }}/fabricantes","name":"Fabricantes - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Fussaca2\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e6a4453a97344ed4aaef825ee213265f","parentId":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","modified":1712700143396,"created":1710094702601,"url":"{{ _.localhost }}/fabricantes/10","name":"Fabricantes - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Fuscaoopp\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_6d91e6f9967544dd91e95e411136916e","parentId":"fld_b868fd002a4a480f8bbd1c11ef6ca61c","modified":1710124815008,"created":1710094852743,"url":"{{ _.localhost }}/fabricantes/11","name":"Fabricantes - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_5113eea02a5c4071860188cbd2dda081","parentId":"fld_df62d16489f34d48953fceaa82f8b7f6","modified":1710124886520,"created":1710124852737,"url":"{{ _.localhost }}/modelos","name":"Modelos - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_df62d16489f34d48953fceaa82f8b7f6","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1710124852734,"created":1710124852734,"name":"Modelos","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1690916579727.5,"_type":"request_group"},{"_id":"req_a6fb6dad1fb041f0b1ecaa4d812f1a7c","parentId":"fld_df62d16489f34d48953fceaa82f8b7f6","modified":1712740754027,"created":1710124852740,"url":"{{ _.localhost }}/modelos/50","name":"Modelos - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ab523304c7b34ca795ba9d3cc185d3a5","parentId":"fld_df62d16489f34d48953fceaa82f8b7f6","modified":1712726225664,"created":1710124852742,"url":"{{ _.localhost }}/modelos","name":"Modelos - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Palisadesss222334\",\n\t\"id_fabricante\": 1\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_9a169c31445d407ba3075541fddc08bd","parentId":"fld_df62d16489f34d48953fceaa82f8b7f6","modified":1712775032883,"created":1710124852745,"url":"{{ _.localhost }}/Carros/11","name":"Modelos - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Accord\",\n\t\"id_fabricante\": 5\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c79fd950d18049aca3715032a01da701","parentId":"fld_df62d16489f34d48953fceaa82f8b7f6","modified":1712751560228,"created":1710124852748,"url":"{{ _.localhost }}/modelos/11","name":"Modelos - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e0973c33649b48099aacf35649653b2e","parentId":"fld_3e428635fed14fb3b183abcb4e39c491","modified":1712775068984,"created":1712774981293,"url":"{{ _.localhost }}/carros","name":"Carros- Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_3e428635fed14fb3b183abcb4e39c491","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712853223389,"created":1712774981291,"name":"Carros","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1688515555914.1875,"_type":"request_group"},{"_id":"req_3a9d7d4bc6be480f9383a55a1cd99e20","parentId":"fld_3e428635fed14fb3b183abcb4e39c491","modified":1712775744279,"created":1712774981300,"url":"{{ _.localhost }}/carros/11","name":"Carros- Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_899838248c224462bb972ab115fa0346","parentId":"fld_3e428635fed14fb3b183abcb4e39c491","modified":1712842331816,"created":1712774981304,"url":"{{ _.localhost }}/carros","name":"Carros- Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"placa\": \"EFG1235\",\n\t\"cor\": \"BRANCO\",\n\t\"disponivel\": true,\n\t\"valorLocacao\": 2400.00,\n\t\"ano\": 2004,\n\t\"id_modelo\": 11\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e2f1d83e17304af08f5f36510eb57b24","parentId":"fld_3e428635fed14fb3b183abcb4e39c491","modified":1712851418113,"created":1712774981311,"url":"{{ _.localhost }}/carros/11","name":"Carros - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\t\"placa\": \"EFG1234\",\n\t\t\"cor\": \"CINZA\",\n\t\t\"disponivel\": true,\n\t\t\"valorLocacao\": 2400.00,\n\t\t\"ano\": 2024,\n\t\t\"id_modelo\": 10\n}\n"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f14c7fb0ba0645ef8614c6756ea966c7","parentId":"fld_3e428635fed14fb3b183abcb4e39c491","modified":1712851441229,"created":1712774981317,"url":"{{ _.localhost }}/carros/51","name":"Carros- Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d57fa7209b444f268425a6cb319f9fff","parentId":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","modified":1712853284682,"created":1712853203752,"url":"{{ _.localhost }}/estados","name":"Estados - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712853220761,"created":1712853203750,"name":"Estados","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1686114532100.875,"_type":"request_group"},{"_id":"req_227ca4a21ee14b43aed7e5504c79819c","parentId":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","modified":1712853928364,"created":1712853203756,"url":"{{ _.localhost }}/estados/99","name":"Estados - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d05ce55a9a8547f6afc14677ad22c555","parentId":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","modified":1712880838310,"created":1712853203760,"url":"{{ _.localhost }}/estados","name":"Estados - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"descricao\": \"EXTERIORds\",\n\t\"sigla\": \"ET\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_835f45f5bbbe496c98835bfeec6028cb","parentId":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","modified":1712856696584,"created":1712853203763,"url":"{{ _.localhost }}/estados/2","name":"Estados - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"descricao\": \"sasasasS\",\n\t\"sigla\": \"ff\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_fe20a9225c7c46d5a94add64132839b0","parentId":"fld_e6f7f69dc6664b9bb83d1e9a3a6e409b","modified":1712856724873,"created":1712853203766,"url":"{{ _.localhost }}/estados/2","name":"Estados  - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_7948665e63b84db780f88bd6dd5e92f9","parentId":"fld_28ef0282c2b745f0911de02e98d09c37","modified":1712874558292,"created":1712874503215,"url":"{{ _.localhost }}/municipios","name":"Municipios - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_28ef0282c2b745f0911de02e98d09c37","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712874503210,"created":1712874503210,"name":"Municipios","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1678911460660.9375,"_type":"request_group"},{"_id":"req_54a4e47697094e80ba8a990d13267193","parentId":"fld_28ef0282c2b745f0911de02e98d09c37","modified":1712883148351,"created":1712874503219,"url":"{{ _.localhost }}/municipios/1100015","name":"Municipios - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_32f3a79b5504412b8d3f2b793ad86a2f","parentId":"fld_28ef0282c2b745f0911de02e98d09c37","modified":1712881440396,"created":1712874503223,"url":"{{ _.localhost }}/municipios","name":"Municipios - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"descricao\": \"BURITISt2\",\n\t\"id_estado\": 11\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_7273e84ff9654cdda173e96c7e037744","parentId":"fld_28ef0282c2b745f0911de02e98d09c37","modified":1712880770095,"created":1712874503226,"url":"{{ _.localhost }}/municipios/1100452","name":"Municipios - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"descricao\": \"BURITISt10\",\n\t\"id_estado\": 11\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_a313f837a705467b85fbd5f4d3ed0bc2","parentId":"fld_28ef0282c2b745f0911de02e98d09c37","modified":1712883770155,"created":1712874503229,"url":"{{ _.localhost }}/municipios/11000312","name":"Municipios - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ae17d526e3324c3cb2c29d5d1ea5ac41","parentId":"fld_9d68ac162b1348f29d105b2940e44d91","modified":1712886214887,"created":1712886178887,"url":"{{ _.localhost }}/seguradoras","name":"Seguradoras - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_9d68ac162b1348f29d105b2940e44d91","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712886178886,"created":1712886178886,"name":"Seguradoras","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1675309924940.9688,"_type":"request_group"},{"_id":"req_eaf11e8af47e4f84ae6d6469d07e0155","parentId":"fld_9d68ac162b1348f29d105b2940e44d91","modified":1712887062727,"created":1712886178891,"url":"{{ _.localhost }}/seguradoras/2","name":"Seguradoras - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_8eb56d30f7b945da823f61a485e94ae3","parentId":"fld_9d68ac162b1348f29d105b2940e44d91","modified":1712922812056,"created":1712886178893,"url":"{{ _.localhost }}/seguradoras","name":"Seguradoras - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Seguro\",\n\t\"cnpj\": \"89014445678901\",\n\t\"email\": \"in00o@se00urovip.com\",\n\t\"valor\": 47100.00,\n\t\"id_municipio\": 1100023\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_02fc4022404546098e36b84946389f9a","parentId":"fld_9d68ac162b1348f29d105b2940e44d91","modified":1712922750841,"created":1712886178895,"url":"{{ _.localhost }}/seguradoras/10","name":"Seguradoras - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"Seguro\",\n\t\"cnpj\": \"89014445678903\",\n\t\"email\": \"in00o@se00urovip.com\",\n\t\"valor\": 47100.00,\n\t\"id_municipio\": 1100023\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d47eeb8d7ccc423d84015645c52f1eb8","parentId":"fld_9d68ac162b1348f29d105b2940e44d91","modified":1712924152083,"created":1712886178899,"url":"{{ _.localhost }}/seguradoras/11","name":"Seguradoras - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_edfbb164a77f43da988cbe67af3945d8","parentId":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","modified":1712945374261,"created":1712925418174,"url":"{{ _.localhost }}/seguradoratelefones","name":"SeguradoraTelefones - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712925418171,"created":1712925418171,"name":"SeguradoraTelefones","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1673509157080.9844,"_type":"request_group"},{"_id":"req_246ed09be5934962867c06f340d2e3cd","parentId":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","modified":1712945377164,"created":1712925418177,"url":"{{ _.localhost }}/seguradoratelefones/2","name":"SeguradoraTelefones - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_920d392f4c74432abb37d6e9f12f0391","parentId":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","modified":1712945379484,"created":1712925418181,"url":"{{ _.localhost }}/seguradoratelefones","name":"SeguradoraTelefones - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"telefone\": \"+55 (19) 9876-5432\",\n\t\"id_seguradora\": 2\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f7cb5fa400a545269cc327632f8a83e7","parentId":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","modified":1712945382413,"created":1712925418184,"url":"{{ _.localhost }}/seguradoratelefones/11","name":"SeguradoraTelefones - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"telefone\": \"+55 (19) 9876-5432\",\n\t\"id_seguradora\": 10\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e70001fab83b4b9da865d188ec480452","parentId":"fld_94f2e750f5f14d1c8fb5ad12b85d3047","modified":1712945385484,"created":1712925418187,"url":"{{ _.localhost }}/seguradoratelefones/11","name":"SeguradoraTelefones - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e7212ed7227d4b3d84ddb6c4835e2aae","parentId":"fld_45c129c367d0407497b711eefdddc256","modified":1712940365097,"created":1712940298565,"url":"{{ _.localhost }}/clientes","name":"Clientes - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_45c129c367d0407497b711eefdddc256","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712940298559,"created":1712940298559,"name":"Clientes","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1672608773150.9922,"_type":"request_group"},{"_id":"req_a9ff4cb292de40b09be11d702149d587","parentId":"fld_45c129c367d0407497b711eefdddc256","modified":1712940639545,"created":1712940298572,"url":"{{ _.localhost }}/clientes/1","name":"Clientes - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_8ec25d8f1c7b45bb82de3077cadbc8ac","parentId":"fld_45c129c367d0407497b711eefdddc256","modified":1712943738791,"created":1712940298578,"url":"{{ _.localhost }}/clientes","name":"Clientes - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"nome\": \"João Vista\",\n\t\"rg\": \"123456789\",\n\t\"cpf\": \"12345678906\",\n\t\"logradouro\": \"Rua A, 123\",\n\t\"cnh\": \"98765432101\",\n\t\"datavencimentocnh\": \"2024-01-01\",\n\t\"email\": \"joao.silva@email.com\",\n\t\"id_municipio\": 3526902\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c103a8ce1f2b4eebb6b97ca67ff0a2ab","parentId":"fld_45c129c367d0407497b711eefdddc256","modified":1712944349006,"created":1712940298582,"url":"{{ _.localhost }}/clientes/51","name":"Clientes - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\t\"nome\": \"João Vista\",\n\t\t\"rg\": \"123456789\",\n\t\t\"cpf\": \"12345678902\",\n\t\t\"logradouro\": \"Rua A, 123\",\n\t\t\"cnh\": \"98765432101\",\n\t\t\"datavencimentocnh\": \"2024-01-01\",\n\t\t\"email\": \"joao.silva@email.com\",\n\t\t\"id_municipio\": 3526902\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_92fc0344e1354f22b2c7e8c86e173195","parentId":"fld_45c129c367d0407497b711eefdddc256","modified":1712945019026,"created":1712940298584,"url":"{{ _.localhost }}/clientes/51","name":"Clientes - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b7568963810f4aa4bd3a1f704f092580","parentId":"fld_e672bb1251c247fda38e079eb8085f84","modified":1712945392619,"created":1712945269508,"url":"{{ _.localhost }}/clientetelefones","name":"Clientes - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_e672bb1251c247fda38e079eb8085f84","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712945280703,"created":1712945269506,"name":"ClienteTelefones","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1672158581185.996,"_type":"request_group"},{"_id":"req_0f4f5454a791402187b7e2deff17e77b","parentId":"fld_e672bb1251c247fda38e079eb8085f84","modified":1712945401294,"created":1712945269513,"url":"{{ _.localhost }}/clientetelefones/1","name":"Clientes - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_463c15eb11f04ae8a96cd7770846ac46","parentId":"fld_e672bb1251c247fda38e079eb8085f84","modified":1712948453002,"created":1712945269516,"url":"{{ _.localhost }}/clientetelefones","name":"Clientes - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 16\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_dda3eb3b285144bf81583521a078a543","parentId":"fld_e672bb1251c247fda38e079eb8085f84","modified":1712947706144,"created":1712945269519,"url":"{{ _.localhost }}/clientetelefones/16","name":"Clientes - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 12\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_fefba9e58ad94e858fef2adac3866e65","parentId":"fld_e672bb1251c247fda38e079eb8085f84","modified":1712948372039,"created":1712945269523,"url":"{{ _.localhost }}/clientetelefones/2","name":"Clientes - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e8476c23a47946029f7ba4aa66711234","parentId":"fld_d3f24f9d8ecd415e830b9f954847b5d2","modified":1712950105406,"created":1712950055902,"url":"{{ _.localhost }}/locacoes","name":"Locacoes - Find All","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787529,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_d3f24f9d8ecd415e830b9f954847b5d2","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1712950055900,"created":1712950055900,"name":"Locacoes","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1671933485203.498,"_type":"request_group"},{"_id":"req_0095bb74c7824f28ba5e2d683c46946c","parentId":"fld_d3f24f9d8ecd415e830b9f954847b5d2","modified":1712950382448,"created":1712950055907,"url":"{{ _.localhost }}/locacoes/1","name":"Locacoes - Find by ID","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787429,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_371bf5cb9b2f40c197e18cfba3bf5740","parentId":"fld_d3f24f9d8ecd415e830b9f954847b5d2","modified":1712950587339,"created":1712950055911,"url":"{{ _.localhost }}/locacoes","name":"Locacoes - Insert","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"datalocacao\": \"2023-01-15\",\n\t\"datadevolucao\": \"2023-01-20\",\n\t\"datadevolvida\": \"2023-01-21\",\n\t\"valor\": 150.00,\n\t\"valordesconto\": 20.00,\n\t\"valortotal\": 130.00,\n\t\"id_carro\": 1,\n\t\"id_cliente\": 1,\n\t\"id_seguradora\": 1\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787329,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_041aa8c5bdd34c7ab1f34e48c53ca338","parentId":"fld_d3f24f9d8ecd415e830b9f954847b5d2","modified":1712950121077,"created":1712950055917,"url":"{{ _.localhost }}/locacoes/16","name":"Locacoes - Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 12\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787229,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c5f7f61f23804a09b6b898690b9fd13b","parentId":"fld_d3f24f9d8ecd415e830b9f954847b5d2","modified":1712950125627,"created":1712950055919,"url":"{{ _.localhost }}/locacoes/2","name":"Locacoes - Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"insomnia/2023.5.8"}],"authentication":{},"metaSortKey":-1710124787129,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_9d9e7d98c33d6282019741cd6d19d9d5d9396254","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1710094341710,"created":1710091312113,"name":"Base Environment","data":{"localhost":"localhost:8180"},"dataPropertyOrder":{"&":["localhost"]},"color":null,"isPrivate":false,"metaSortKey":1710091312113,"_type":"environment"},{"_id":"jar_9d9e7d98c33d6282019741cd6d19d9d5d9396254","parentId":"wrk_dd0f82f719de48559edc7b54f47298e5","modified":1710091312117,"created":1710091312117,"name":"Default Jar","cookies":[],"_type":"cookie_jar"}]}
+{
+  "__export_date": "2024-04-12T20:00:50.264Z",
+  "__export_format": 4,
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "_type": "export",
+  "resources": [
+    {
+      "_id": "req_88516150388543af983d83ca4f49fa01",
+      "parentId": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "modified": 1710124787576,
+      "created": 1710091315750,
+      "url": "{{ _.localhost }}/fabricantes",
+      "name": "Fabricantes - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1710124770234,
+      "created": 1710124770234,
+      "name": "Fabricantes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710124770234,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "parentId": null,
+      "modified": 1710091312106,
+      "created": 1710091312106,
+      "name": "LocadoraCarrosJPA",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_4c6b3bff7e294cdb97dcb24981a9450d",
+      "parentId": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "modified": 1712593714069,
+      "created": 1710094349299,
+      "url": "{{ _.localhost }}/fabricantes/1",
+      "name": "Fabricantes - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4f1b5918f62247c8b84e66249cd1c521",
+      "parentId": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "modified": 1712707721798,
+      "created": 1710094503070,
+      "url": "{{ _.localhost }}/fabricantes",
+      "name": "Fabricantes - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Fussaca2\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e6a4453a97344ed4aaef825ee213265f",
+      "parentId": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "modified": 1712700143396,
+      "created": 1710094702601,
+      "url": "{{ _.localhost }}/fabricantes/10",
+      "name": "Fabricantes - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Fuscaoopp\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d91e6f9967544dd91e95e411136916e",
+      "parentId": "fld_b868fd002a4a480f8bbd1c11ef6ca61c",
+      "modified": 1710124815008,
+      "created": 1710094852743,
+      "url": "{{ _.localhost }}/fabricantes/11",
+      "name": "Fabricantes - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5113eea02a5c4071860188cbd2dda081",
+      "parentId": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "modified": 1710124886520,
+      "created": 1710124852737,
+      "url": "{{ _.localhost }}/modelos",
+      "name": "Modelos - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1710124852734,
+      "created": 1710124852734,
+      "name": "Modelos",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1690916579727.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_a6fb6dad1fb041f0b1ecaa4d812f1a7c",
+      "parentId": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "modified": 1712740754027,
+      "created": 1710124852740,
+      "url": "{{ _.localhost }}/modelos/50",
+      "name": "Modelos - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ab523304c7b34ca795ba9d3cc185d3a5",
+      "parentId": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "modified": 1712726225664,
+      "created": 1710124852742,
+      "url": "{{ _.localhost }}/modelos",
+      "name": "Modelos - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Palisadesss222334\",\n\t\"id_fabricante\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9a169c31445d407ba3075541fddc08bd",
+      "parentId": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "modified": 1712775032883,
+      "created": 1710124852745,
+      "url": "{{ _.localhost }}/Carros/11",
+      "name": "Modelos - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Accord\",\n\t\"id_fabricante\": 5\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c79fd950d18049aca3715032a01da701",
+      "parentId": "fld_df62d16489f34d48953fceaa82f8b7f6",
+      "modified": 1712751560228,
+      "created": 1710124852748,
+      "url": "{{ _.localhost }}/modelos/11",
+      "name": "Modelos - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e0973c33649b48099aacf35649653b2e",
+      "parentId": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "modified": 1712775068984,
+      "created": 1712774981293,
+      "url": "{{ _.localhost }}/carros",
+      "name": "Carros- Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712853223389,
+      "created": 1712774981291,
+      "name": "Carros",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1688515555914.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3a9d7d4bc6be480f9383a55a1cd99e20",
+      "parentId": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "modified": 1712775744279,
+      "created": 1712774981300,
+      "url": "{{ _.localhost }}/carros/11",
+      "name": "Carros- Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_899838248c224462bb972ab115fa0346",
+      "parentId": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "modified": 1712842331816,
+      "created": 1712774981304,
+      "url": "{{ _.localhost }}/carros",
+      "name": "Carros- Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"placa\": \"EFG1235\",\n\t\"cor\": \"BRANCO\",\n\t\"disponivel\": true,\n\t\"valorLocacao\": 2400.00,\n\t\"ano\": 2004,\n\t\"id_modelo\": 11\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e2f1d83e17304af08f5f36510eb57b24",
+      "parentId": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "modified": 1712851418113,
+      "created": 1712774981311,
+      "url": "{{ _.localhost }}/carros/11",
+      "name": "Carros - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\t\"placa\": \"EFG1234\",\n\t\t\"cor\": \"CINZA\",\n\t\t\"disponivel\": true,\n\t\t\"valorLocacao\": 2400.00,\n\t\t\"ano\": 2024,\n\t\t\"id_modelo\": 10\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f14c7fb0ba0645ef8614c6756ea966c7",
+      "parentId": "fld_3e428635fed14fb3b183abcb4e39c491",
+      "modified": 1712851441229,
+      "created": 1712774981317,
+      "url": "{{ _.localhost }}/carros/51",
+      "name": "Carros- Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d57fa7209b444f268425a6cb319f9fff",
+      "parentId": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "modified": 1712853284682,
+      "created": 1712853203752,
+      "url": "{{ _.localhost }}/estados",
+      "name": "Estados - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712853220761,
+      "created": 1712853203750,
+      "name": "Estados",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1686114532100.875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_227ca4a21ee14b43aed7e5504c79819c",
+      "parentId": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "modified": 1712853928364,
+      "created": 1712853203756,
+      "url": "{{ _.localhost }}/estados/99",
+      "name": "Estados - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d05ce55a9a8547f6afc14677ad22c555",
+      "parentId": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "modified": 1712880838310,
+      "created": 1712853203760,
+      "url": "{{ _.localhost }}/estados",
+      "name": "Estados - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"descricao\": \"EXTERIORds\",\n\t\"sigla\": \"ET\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_835f45f5bbbe496c98835bfeec6028cb",
+      "parentId": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "modified": 1712856696584,
+      "created": 1712853203763,
+      "url": "{{ _.localhost }}/estados/2",
+      "name": "Estados - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"descricao\": \"sasasasS\",\n\t\"sigla\": \"ff\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fe20a9225c7c46d5a94add64132839b0",
+      "parentId": "fld_e6f7f69dc6664b9bb83d1e9a3a6e409b",
+      "modified": 1712856724873,
+      "created": 1712853203766,
+      "url": "{{ _.localhost }}/estados/2",
+      "name": "Estados  - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7948665e63b84db780f88bd6dd5e92f9",
+      "parentId": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "modified": 1712874558292,
+      "created": 1712874503215,
+      "url": "{{ _.localhost }}/municipios",
+      "name": "Municipios - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712874503210,
+      "created": 1712874503210,
+      "name": "Municipios",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1678911460660.9375,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_54a4e47697094e80ba8a990d13267193",
+      "parentId": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "modified": 1712883148351,
+      "created": 1712874503219,
+      "url": "{{ _.localhost }}/municipios/1100015",
+      "name": "Municipios - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_32f3a79b5504412b8d3f2b793ad86a2f",
+      "parentId": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "modified": 1712881440396,
+      "created": 1712874503223,
+      "url": "{{ _.localhost }}/municipios",
+      "name": "Municipios - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"descricao\": \"BURITISt2\",\n\t\"id_estado\": 11\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7273e84ff9654cdda173e96c7e037744",
+      "parentId": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "modified": 1712880770095,
+      "created": 1712874503226,
+      "url": "{{ _.localhost }}/municipios/1100452",
+      "name": "Municipios - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"descricao\": \"BURITISt10\",\n\t\"id_estado\": 11\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a313f837a705467b85fbd5f4d3ed0bc2",
+      "parentId": "fld_28ef0282c2b745f0911de02e98d09c37",
+      "modified": 1712883770155,
+      "created": 1712874503229,
+      "url": "{{ _.localhost }}/municipios/11000312",
+      "name": "Municipios - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ae17d526e3324c3cb2c29d5d1ea5ac41",
+      "parentId": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "modified": 1712886214887,
+      "created": 1712886178887,
+      "url": "{{ _.localhost }}/seguradoras",
+      "name": "Seguradoras - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712886178886,
+      "created": 1712886178886,
+      "name": "Seguradoras",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1675309924940.9688,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_eaf11e8af47e4f84ae6d6469d07e0155",
+      "parentId": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "modified": 1712887062727,
+      "created": 1712886178891,
+      "url": "{{ _.localhost }}/seguradoras/2",
+      "name": "Seguradoras - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8eb56d30f7b945da823f61a485e94ae3",
+      "parentId": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "modified": 1712922812056,
+      "created": 1712886178893,
+      "url": "{{ _.localhost }}/seguradoras",
+      "name": "Seguradoras - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Seguro\",\n\t\"cnpj\": \"89014445678901\",\n\t\"email\": \"in00o@se00urovip.com\",\n\t\"valor\": 47100.00,\n\t\"id_municipio\": 1100023\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_02fc4022404546098e36b84946389f9a",
+      "parentId": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "modified": 1712922750841,
+      "created": 1712886178895,
+      "url": "{{ _.localhost }}/seguradoras/10",
+      "name": "Seguradoras - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Seguro\",\n\t\"cnpj\": \"89014445678903\",\n\t\"email\": \"in00o@se00urovip.com\",\n\t\"valor\": 47100.00,\n\t\"id_municipio\": 1100023\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d47eeb8d7ccc423d84015645c52f1eb8",
+      "parentId": "fld_9d68ac162b1348f29d105b2940e44d91",
+      "modified": 1712924152083,
+      "created": 1712886178899,
+      "url": "{{ _.localhost }}/seguradoras/11",
+      "name": "Seguradoras - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_edfbb164a77f43da988cbe67af3945d8",
+      "parentId": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "modified": 1712945374261,
+      "created": 1712925418174,
+      "url": "{{ _.localhost }}/seguradoratelefones",
+      "name": "SeguradoraTelefones - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712925418171,
+      "created": 1712925418171,
+      "name": "SeguradoraTelefones",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1673509157080.9844,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_246ed09be5934962867c06f340d2e3cd",
+      "parentId": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "modified": 1712945377164,
+      "created": 1712925418177,
+      "url": "{{ _.localhost }}/seguradoratelefones/2",
+      "name": "SeguradoraTelefones - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_920d392f4c74432abb37d6e9f12f0391",
+      "parentId": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "modified": 1712945379484,
+      "created": 1712925418181,
+      "url": "{{ _.localhost }}/seguradoratelefones",
+      "name": "SeguradoraTelefones - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"telefone\": \"+55 (19) 9876-5432\",\n\t\"id_seguradora\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f7cb5fa400a545269cc327632f8a83e7",
+      "parentId": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "modified": 1712945382413,
+      "created": 1712925418184,
+      "url": "{{ _.localhost }}/seguradoratelefones/11",
+      "name": "SeguradoraTelefones - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"telefone\": \"+55 (19) 9876-5432\",\n\t\"id_seguradora\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e70001fab83b4b9da865d188ec480452",
+      "parentId": "fld_94f2e750f5f14d1c8fb5ad12b85d3047",
+      "modified": 1712945385484,
+      "created": 1712925418187,
+      "url": "{{ _.localhost }}/seguradoratelefones/11",
+      "name": "SeguradoraTelefones - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e7212ed7227d4b3d84ddb6c4835e2aae",
+      "parentId": "fld_45c129c367d0407497b711eefdddc256",
+      "modified": 1712940365097,
+      "created": 1712940298565,
+      "url": "{{ _.localhost }}/clientes",
+      "name": "Clientes - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_45c129c367d0407497b711eefdddc256",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712940298559,
+      "created": 1712940298559,
+      "name": "Clientes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672608773150.9922,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_a9ff4cb292de40b09be11d702149d587",
+      "parentId": "fld_45c129c367d0407497b711eefdddc256",
+      "modified": 1712940639545,
+      "created": 1712940298572,
+      "url": "{{ _.localhost }}/clientes/1",
+      "name": "Clientes - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8ec25d8f1c7b45bb82de3077cadbc8ac",
+      "parentId": "fld_45c129c367d0407497b711eefdddc256",
+      "modified": 1712943738791,
+      "created": 1712940298578,
+      "url": "{{ _.localhost }}/clientes",
+      "name": "Clientes - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"João Vista\",\n\t\"rg\": \"123456789\",\n\t\"cpf\": \"12345678906\",\n\t\"logradouro\": \"Rua A, 123\",\n\t\"cnh\": \"98765432101\",\n\t\"datavencimentocnh\": \"2024-01-01\",\n\t\"email\": \"joao.silva@email.com\",\n\t\"id_municipio\": 3526902\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c103a8ce1f2b4eebb6b97ca67ff0a2ab",
+      "parentId": "fld_45c129c367d0407497b711eefdddc256",
+      "modified": 1712944349006,
+      "created": 1712940298582,
+      "url": "{{ _.localhost }}/clientes/51",
+      "name": "Clientes - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\t\"nome\": \"João Vista\",\n\t\t\"rg\": \"123456789\",\n\t\t\"cpf\": \"12345678902\",\n\t\t\"logradouro\": \"Rua A, 123\",\n\t\t\"cnh\": \"98765432101\",\n\t\t\"datavencimentocnh\": \"2024-01-01\",\n\t\t\"email\": \"joao.silva@email.com\",\n\t\t\"id_municipio\": 3526902\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_92fc0344e1354f22b2c7e8c86e173195",
+      "parentId": "fld_45c129c367d0407497b711eefdddc256",
+      "modified": 1712945019026,
+      "created": 1712940298584,
+      "url": "{{ _.localhost }}/clientes/51",
+      "name": "Clientes - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b7568963810f4aa4bd3a1f704f092580",
+      "parentId": "fld_e672bb1251c247fda38e079eb8085f84",
+      "modified": 1712945392619,
+      "created": 1712945269508,
+      "url": "{{ _.localhost }}/clientetelefones",
+      "name": "Clientes - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e672bb1251c247fda38e079eb8085f84",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712945280703,
+      "created": 1712945269506,
+      "name": "ClienteTelefones",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672158581185.996,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0f4f5454a791402187b7e2deff17e77b",
+      "parentId": "fld_e672bb1251c247fda38e079eb8085f84",
+      "modified": 1712945401294,
+      "created": 1712945269513,
+      "url": "{{ _.localhost }}/clientetelefones/1",
+      "name": "Clientes - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_463c15eb11f04ae8a96cd7770846ac46",
+      "parentId": "fld_e672bb1251c247fda38e079eb8085f84",
+      "modified": 1712948453002,
+      "created": 1712945269516,
+      "url": "{{ _.localhost }}/clientetelefones",
+      "name": "Clientes - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 16\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dda3eb3b285144bf81583521a078a543",
+      "parentId": "fld_e672bb1251c247fda38e079eb8085f84",
+      "modified": 1712947706144,
+      "created": 1712945269519,
+      "url": "{{ _.localhost }}/clientetelefones/16",
+      "name": "Clientes - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 12\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fefba9e58ad94e858fef2adac3866e65",
+      "parentId": "fld_e672bb1251c247fda38e079eb8085f84",
+      "modified": 1712948372039,
+      "created": 1712945269523,
+      "url": "{{ _.localhost }}/clientetelefones/2",
+      "name": "Clientes - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e8476c23a47946029f7ba4aa66711234",
+      "parentId": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "modified": 1712950105406,
+      "created": 1712950055902,
+      "url": "{{ _.localhost }}/locacoes",
+      "name": "Locacoes - Find All",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787529,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1712950055900,
+      "created": 1712950055900,
+      "name": "Locacoes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671933485203.498,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0095bb74c7824f28ba5e2d683c46946c",
+      "parentId": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "modified": 1712950382448,
+      "created": 1712950055907,
+      "url": "{{ _.localhost }}/locacoes/1",
+      "name": "Locacoes - Find by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787429,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_371bf5cb9b2f40c197e18cfba3bf5740",
+      "parentId": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "modified": 1712950587339,
+      "created": 1712950055911,
+      "url": "{{ _.localhost }}/locacoes",
+      "name": "Locacoes - Insert",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"datalocacao\": \"2023-01-15\",\n\t\"datadevolucao\": \"2023-01-20\",\n\t\"datadevolvida\": \"2023-01-21\",\n\t\"valor\": 150.00,\n\t\"valordesconto\": 20.00,\n\t\"valortotal\": 130.00,\n\t\"id_carro\": 1,\n\t\"id_cliente\": 1,\n\t\"id_seguradora\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_041aa8c5bdd34c7ab1f34e48c53ca338",
+      "parentId": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "modified": 1712950121077,
+      "created": 1712950055917,
+      "url": "{{ _.localhost }}/locacoes/16",
+      "name": "Locacoes - Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"telefone\": \"+55 (19) 1234-5678\",\n\t\"id_cliente\": 12\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c5f7f61f23804a09b6b898690b9fd13b",
+      "parentId": "fld_d3f24f9d8ecd415e830b9f954847b5d2",
+      "modified": 1712950125627,
+      "created": 1712950055919,
+      "url": "{{ _.localhost }}/locacoes/2",
+      "name": "Locacoes - Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710124787129,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_9d9e7d98c33d6282019741cd6d19d9d5d9396254",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1710094341710,
+      "created": 1710091312113,
+      "name": "Base Environment",
+      "data": {
+        "localhost": "localhost:8180"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "localhost"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1710091312113,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_9d9e7d98c33d6282019741cd6d19d9d5d9396254",
+      "parentId": "wrk_dd0f82f719de48559edc7b54f47298e5",
+      "modified": 1710091312117,
+      "created": 1710091312117,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
