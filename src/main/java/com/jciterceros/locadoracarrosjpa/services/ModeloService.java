@@ -34,7 +34,7 @@ public class ModeloService {
 
     @Transactional(readOnly = true)
     public List<ModeloDTO> findAll() {
-        List<Modelo> modelos = modeloRepository.findAll();
+        List<Modelo> modelos = modeloRepository.searchAll();
         if (modelos.isEmpty()) {
             throw new ResourceNotFoundException("Não existem modelos cadastrados");
         }
