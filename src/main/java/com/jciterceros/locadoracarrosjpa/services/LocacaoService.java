@@ -1,9 +1,14 @@
 package com.jciterceros.locadoracarrosjpa.services;
 
-import com.jciterceros.locadoracarrosjpa.dto.ClientetelefoneDTO;
 import com.jciterceros.locadoracarrosjpa.dto.LocacaoDTO;
-import com.jciterceros.locadoracarrosjpa.entities.*;
-import com.jciterceros.locadoracarrosjpa.repositories.*;
+import com.jciterceros.locadoracarrosjpa.entities.Carro;
+import com.jciterceros.locadoracarrosjpa.entities.Cliente;
+import com.jciterceros.locadoracarrosjpa.entities.Locacao;
+import com.jciterceros.locadoracarrosjpa.entities.Seguradora;
+import com.jciterceros.locadoracarrosjpa.repositories.CarroRepository;
+import com.jciterceros.locadoracarrosjpa.repositories.ClienteRepository;
+import com.jciterceros.locadoracarrosjpa.repositories.LocacaoRepository;
+import com.jciterceros.locadoracarrosjpa.repositories.SeguradoraRepository;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.ResourceNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
@@ -11,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,27 +25,20 @@ import java.util.List;
 public class LocacaoService {
     private final ModelMapper mapper;
     private Boolean mapperAllreadyConfigured = false;
-
-    private final FabricanteRepository fabricanteRepository;
-    private final ModeloRepository modeloRepository;
     private final CarroRepository carroRepository;
     private final SeguradoraRepository seguradoraRepository;
-    private final SeguradoratelefoneRepository seguradoratelefoneRepository;
     private final ClienteRepository clienteRepository;
-    private final ClientetelefoneRepository clientetelefoneRepository;
 
     private final LocacaoRepository locacaoRepository;
 
     @Autowired
-    public LocacaoService(ModelMapper mapper, FabricanteRepository fabricanteRepository, ModeloRepository modeloRepository, CarroRepository carroRepository, SeguradoraRepository seguradoraRepository, SeguradoratelefoneRepository seguradoratelefoneRepository, ClienteRepository clienteRepository, ClientetelefoneRepository clientetelefoneRepository, LocacaoRepository locacaoRepository) {
+    public LocacaoService(ModelMapper mapper, CarroRepository carroRepository, SeguradoraRepository seguradoraRepository,
+                          ClienteRepository clienteRepository, LocacaoRepository locacaoRepository){
         this.mapper = mapper;
-        this.fabricanteRepository = fabricanteRepository;
-        this.modeloRepository = modeloRepository;
+
         this.carroRepository = carroRepository;
         this.seguradoraRepository = seguradoraRepository;
-        this.seguradoratelefoneRepository = seguradoratelefoneRepository;
         this.clienteRepository = clienteRepository;
-        this.clientetelefoneRepository = clientetelefoneRepository;
         this.locacaoRepository = locacaoRepository;
         configureMapper();
     }
@@ -66,17 +66,86 @@ public class LocacaoService {
     public LocacaoDTO insert(LocacaoDTO locacaoDTO) {
         Carro carro = carroRepository.findById(locacaoDTO.getId_carro())
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Carro não encontrado"));
+        System.out.println("Carro: " + carro.toString());
+        if (!carro.getDisponivel()) {
+            throw new ResourceNotFoundException("O carro não está disponível para locação");
+        }
+
         Cliente cliente = clienteRepository.findById(locacaoDTO.getId_cliente())
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Cliente não encontrado"));
+        System.out.println("Cliente: " + cliente.toString());
+
         Seguradora seguradora = seguradoraRepository.findById(locacaoDTO.getId_seguradora())
                 .orElseThrow(() -> new ResourceNotFoundException("ID da Seguradora não encontrado"));
+        System.out.println("Seguradora: " + seguradora.toString());
 
+        /*
+        Validação das Datas:
+            A data de locação (datalocacao) deve ser anterior à data de devolução (datadevolucao).
+            A data de devolução (datadevolucao) deve ser posterior ou igual à data devolução (datadevolucao).
+        */
+        LocalDate datalocacao;
+        LocalDate datadevolucao;
+        try {
+            datalocacao = locacaoDTO.getDatalocacao();
+            datadevolucao = locacaoDTO.getDatadevolucao();
+        } catch (Exception e) {
+            throw new ResourceNotFoundException("Erro ao converter a data");
+        }
+        Integer diasLocacao = datalocacao.until(datadevolucao).getDays();
+        System.out.println("Data Locação: " + datalocacao);
+        System.out.println("Data Devolução: " + datadevolucao);
+        System.out.println("Days: " + diasLocacao);
+
+        List<Locacao> locacoes = locacaoRepository.findByCarroIdBetweenDatas(locacaoDTO.getId_carro(), datalocacao, datadevolucao);
+        if (!locacoes.isEmpty()) {
+            System.out.println("Locações: " + locacoes.toString());
+            throw new ResourceNotFoundException("O carro não está disponível para locação entre a datalocacao e datadevolucao");
+        }
+
+        /*
+        Validação dos Valores:
+            Os campos de valor (valor), valor de desconto (valordesconto) e valor total (valortotal) não podem ser nulos.
+            Os valores devem ser maiores que zero.
+        */
+        if (locacaoDTO.getValor() == null || locacaoDTO.getValordesconto() == null || locacaoDTO.getValortotal() == null) {
+            throw new ResourceNotFoundException("Os campos de valor, valor de desconto e valor total não podem ser nulos");
+        }
+
+        /*
+        Cálculo do Valor Total:
+            O valor total (valortotal) deve ser calculado como a diferença entre o valor total inicial
+            (calculado com base nos dias de locação e valor diário do automóvel) e o valor de desconto (valordesconto), se houver.
+        */
+        //long diasLocacao = locacaoDTO.getDatalocacao().until(locacaoDTO.getDatadevolucao()).getDays();
+        BigDecimal valorTotal = carro.getValorLocacao().multiply(BigDecimal.valueOf(diasLocacao));
+        System.out.println("Valor Total sem desconto: " + valorTotal);
+        System.out.println("Valor do Desconto: " + locacaoDTO.getValordesconto());
+
+        /*
+        Se nao houver desconto, o valor total é o valor da locação
+        */
+        if (locacaoDTO.getValordesconto().compareTo(BigDecimal.ZERO) == 0) {
+            locacaoDTO.setValortotal(valorTotal);
+        } else {
+            locacaoDTO.setValortotal(valorTotal.subtract(locacaoDTO.getValordesconto()));
+        }
+        System.out.println("Valor Total com desconto: " + locacaoDTO.getValortotal());
+        System.out.println("Numero de diarias: " + diasLocacao);
+
+        /*
+        Caso todas as informações estejam corretas, a locação deve ser confirmada e salva no banco de dados.
+        */
         Locacao locacao = mapper.map(locacaoDTO, Locacao.class);
         locacao.setCarro(carro);
         locacao.setCliente(cliente);
         locacao.setSeguradora(seguradora);
 
+        //TODO: Retirar hardcode Data Devolvida
+        locacao.setDatadevolvida(locacao.getDatadevolucao());
+
         return mapper.map(locacaoRepository.save(locacao), LocacaoDTO.class);
+//        return mapper.map(locacao, LocacaoDTO.class);
     }
 
     private void configureMapper() {
