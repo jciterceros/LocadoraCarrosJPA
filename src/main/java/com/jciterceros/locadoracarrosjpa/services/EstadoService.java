@@ -26,16 +26,15 @@ public class EstadoService {
     public EstadoService(EstadoRepository estadoRepository, ModelMapper mapper) {
         this.estadoRepository = estadoRepository;
         this.mapper = mapper;
+        configureMapper();
     }
 
     @Transactional(readOnly = true)
     public List<EstadoDTO> findAll() {
-        List<Estado> estados = estadoRepository.findAll();
+        List<Estado> estados = estadoRepository.searchAll();
         if (estados.isEmpty()) {
             throw new ResourceNotFoundException("Não existem estados cadastrados");
         }
-
-        configureMapper();
 
         return estados.stream()
                 .map(estado -> mapper.map(estado, EstadoDTO.class))
@@ -44,8 +43,9 @@ public class EstadoService {
 
     @Transactional(readOnly = true)
     public EstadoDTO findById(Long id) {
-        return estadoRepository.findById(id)
+        return estadoRepository.searchById(id).stream()
                 .map(estado -> mapper.map(estado, EstadoDTO.class))
+                .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Estado não encontrado"));
     }
 
@@ -91,6 +91,9 @@ public class EstadoService {
                 map().setId(source.getId());
                 map().setDescricao(source.getDescricao());
                 map().setSigla(source.getSigla());
+                map().setEstadoMunicipios(source.getEstadoMunicipios());
+                map().setEstadoClientes(source.getEstadoClientes());
+                map().setEstadoSeguradoras(source.getEstadoSeguradoras());
             }
         });
         mapperAllreadyConfigured = true;

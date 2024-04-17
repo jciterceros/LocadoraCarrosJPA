@@ -42,7 +42,7 @@ public class Carro {
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
 
-    @OneToMany(mappedBy = "carro",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "carro",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Locacao> locacoes;
 
 }

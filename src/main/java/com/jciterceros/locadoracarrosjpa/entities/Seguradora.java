@@ -10,7 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 @EqualsAndHashCode
-@ToString(exclude = {"seguradoraSeguradoratelefones", "seguradoraLocacoes"})
+@ToString(exclude = {"seguradoraTelefones", "seguradoraLocacoes"})
 @Table(name = "tb_seguradora")
 public class Seguradora {
 
@@ -30,19 +30,24 @@ public class Seguradora {
 
     @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal valor;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    /**
+     * O Relacionamento da Seguradora com Estado
+     *
+     * FetchType.LAZY = carrega somente quando necessário (quando for chamado), por padrao @OneToMany é LAZY
+     * FetchType.EAGER = carrega sempre quando a entidade Pai for carregada, por padrao @ManyToOne é EAGER
+     * */
+    @ManyToOne
     @JoinColumn(name = "id_estado", nullable = false)
     private Estado estado;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_municipio", nullable = false)
     private Municipio municipio;
 
-    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL)
-    private Set<Seguradoratelefone> seguradoraSeguradoratelefones;
+    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Seguradoratelefone> seguradoraTelefones;
 
-    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "seguradora", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<Locacao> seguradoraLocacoes;
 
 }

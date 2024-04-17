@@ -1,4 +1,4 @@
-package com.jciterceros.locadoracarrosjpa.dto.custom;
+package com.jciterceros.locadoracarrosjpa.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jciterceros.locadoracarrosjpa.entities.Cliente;

@@ -35,16 +35,16 @@ public class SeguradoraService {
         this.municipioRepository = municipioRepository;
         this.seguradoratelefoneRepository = seguradoratelefoneRepository;
         this.locacaoRepository = locacaoRepository;
+        configureMapper();
     }
 
     @Transactional(readOnly = true)
     public List<SeguradoraDTO> findAll() {
-        List<Seguradora> seguradoras = seguradoraRepository.findAll();
+        List<Seguradora> seguradoras = seguradoraRepository.searchAll();
         if (seguradoras.isEmpty()) {
             throw new ResourceNotFoundException("Não existem seguradoras cadastradas");
         }
 
-        configureMapper();
         return seguradoras.stream()
                 .map(seguradora -> mapper.map(seguradora, SeguradoraDTO.class))
                 .sorted(Comparator.comparing(SeguradoraDTO::getId))
@@ -53,9 +53,9 @@ public class SeguradoraService {
 
     @Transactional(readOnly = true)
     public SeguradoraDTO findById(Long id) {
-        configureMapper();
-        return seguradoraRepository.findById(id)
+        return seguradoraRepository.searchById(id).stream()
                 .map(seguradora -> mapper.map(seguradora, SeguradoraDTO.class))
+                .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("ID da Seguradora não encontrado"));
     }
 
@@ -67,7 +67,6 @@ public class SeguradoraService {
             throw new DatabaseException("CNPJ já cadastrado");
         }
 
-        configureMapper();
         Seguradora seguradora = mapper.map(seguradoraDTO, Seguradora.class);
         seguradora.setEstado(municipio.getEstado());
         seguradora.setMunicipio(municipio);
@@ -83,7 +82,7 @@ public class SeguradoraService {
         if (seguradoraRepository.existsByCnpj(seguradoraDTO.getCnpj()) && !seguradora.getCnpj().equals(seguradoraDTO.getCnpj())) {
             throw new DatabaseException("CNPJ já cadastrado para outra seguradora");
         }
-        configureMapper();
+
         seguradora = mapper.map(seguradoraDTO, Seguradora.class);
         seguradora.setId(id);
         seguradora.setEstado(municipio.getEstado());

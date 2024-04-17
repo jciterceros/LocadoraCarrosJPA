@@ -32,7 +32,7 @@ public class ClienteDTO {
     @JsonIgnore
     private Municipio municipio;
     @JsonIgnore
-    private Set<Clientetelefone> clienteClientetelefones;
+    private Set<Clientetelefone> clienteTelefones;
     @JsonIgnore
     private Set<Locacao> clienteLocacoes;
 }

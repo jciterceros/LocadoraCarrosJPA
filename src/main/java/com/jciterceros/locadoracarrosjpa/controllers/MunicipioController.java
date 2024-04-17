@@ -1,6 +1,6 @@
 package com.jciterceros.locadoracarrosjpa.controllers;
 
-import com.jciterceros.locadoracarrosjpa.dto.custom.MunicipioDTO;
+import com.jciterceros.locadoracarrosjpa.dto.MunicipioDTO;
 import com.jciterceros.locadoracarrosjpa.services.MunicipioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +9,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-
 @RestController
 @RequestMapping(value = "/municipios")
 public class MunicipioController {

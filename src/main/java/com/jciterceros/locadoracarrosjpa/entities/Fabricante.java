@@ -22,10 +22,10 @@ public class Fabricante {
     @Column(columnDefinition = "VARCHAR(100) NOT NULL", unique = true)
     private String nome;
 
-    @OneToMany(mappedBy = "fabricante")
-    private List<Modelo> modelos= new ArrayList<>();
+    @OneToMany(mappedBy = "fabricante", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Modelo> modelos = new ArrayList<>();
 
-    @OneToMany(mappedBy = "fabricante", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "fabricante", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Carro> carro = new HashSet<>();
 
 }

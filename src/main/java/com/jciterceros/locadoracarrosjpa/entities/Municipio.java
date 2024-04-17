@@ -14,22 +14,23 @@ import java.util.Set;
 @Table(name = "tb_municipio")
 public class Municipio {
 
+    //    @Column(nullable = false, updatable = false)
     @Id
-    @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 100)
     private String descricao;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_estado", nullable = false)
     private Estado estado;
 
-    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<Cliente> municipioClientes;
 
-    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL)
+    // TODO: Estudar como utilizar a anotação @SQLJoinTableRestriction
+    @OneToMany(mappedBy = "municipio", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<Seguradora> municipioSeguradoras;
 
 }

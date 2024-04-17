@@ -4,7 +4,6 @@ import com.jciterceros.locadoracarrosjpa.dto.ClienteDTO;
 import com.jciterceros.locadoracarrosjpa.entities.Cliente;
 import com.jciterceros.locadoracarrosjpa.entities.Municipio;
 import com.jciterceros.locadoracarrosjpa.repositories.ClienteRepository;
-import com.jciterceros.locadoracarrosjpa.repositories.LocacaoRepository;
 import com.jciterceros.locadoracarrosjpa.repositories.MunicipioRepository;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.DatabaseException;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.ResourceNotFoundException;
@@ -25,19 +24,17 @@ public class ClienteService {
     private final ClienteRepository clienteRepository;
 
     private final MunicipioRepository municipioRepository;
-    private final LocacaoRepository locacaoRepository;
 
-    public ClienteService(ModelMapper mapper, ClienteRepository clienteRepository, MunicipioRepository municipioRepository, LocacaoRepository locacaoRepository) {
+    public ClienteService(ModelMapper mapper, ClienteRepository clienteRepository, MunicipioRepository municipioRepository) {
         this.mapper = mapper;
         this.clienteRepository = clienteRepository;
         this.municipioRepository = municipioRepository;
-        this.locacaoRepository = locacaoRepository;
         configureMapper();
     }
 
     @Transactional(readOnly = true)
     public List<ClienteDTO> findAll() {
-        List<Cliente> clientes = clienteRepository.findAll();
+        List<Cliente> clientes = clienteRepository.searchAll();
         if (clientes.isEmpty()) {
             throw new ResourceNotFoundException("Não existem clientes cadastrados");
         }
@@ -50,8 +47,9 @@ public class ClienteService {
 
     @Transactional(readOnly = true)
     public ClienteDTO findById(Long id) {
-        return clienteRepository.findById(id)
+        return clienteRepository.searchById(id).stream()
                 .map(cliente -> mapper.map(cliente, ClienteDTO.class))
+                .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Cliente não encontrado"));
     }
 
@@ -107,6 +105,7 @@ public class ClienteService {
             protected void configure() {
                 map().setId(source.getId());
                 map().setNome(source.getNome());
+                map().setRg(source.getRg());
                 map().setCpf(source.getCpf());
                 map().setLogradouro(source.getLogradouro());
                 map().setCnh(source.getCnh());

@@ -11,7 +11,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(exclude = {"clienteClientetelefones", "clienteLocacoes"})
+@ToString(exclude = {"clienteTelefones", "clienteLocacoes"})
 @Table(name = "tb_cliente")
 public class Cliente {
 
@@ -40,18 +40,18 @@ public class Cliente {
     @Column(nullable = false, length = 50)
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_estado", nullable = false)
     private Estado estado;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_municipio", nullable = false)
     private Municipio municipio;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private Set<Clientetelefone> clienteClientetelefones;
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Clientetelefone> clienteTelefones;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Locacao> clienteLocacoes;
 
 }

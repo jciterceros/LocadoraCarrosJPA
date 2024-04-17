@@ -1,6 +1,6 @@
 package com.jciterceros.locadoracarrosjpa.services;
 
-import com.jciterceros.locadoracarrosjpa.dto.custom.MunicipioDTO;
+import com.jciterceros.locadoracarrosjpa.dto.MunicipioDTO;
 import com.jciterceros.locadoracarrosjpa.entities.Estado;
 import com.jciterceros.locadoracarrosjpa.entities.Municipio;
 import com.jciterceros.locadoracarrosjpa.repositories.ClienteRepository;
@@ -9,6 +9,10 @@ import com.jciterceros.locadoracarrosjpa.repositories.MunicipioRepository;
 import com.jciterceros.locadoracarrosjpa.repositories.SeguradoraRepository;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.DatabaseException;
 import com.jciterceros.locadoracarrosjpa.services.exceptions.ResourceNotFoundException;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,24 +34,37 @@ public class MunicipioService {
 
     private final ClienteRepository clienteRepository;
     private final SeguradoraRepository seguradoraRepository;
+    private EntityManager entityManager;
 
     @Autowired
-    public MunicipioService(EstadoRepository estadoRepository, MunicipioRepository municipioRepository, ModelMapper mapper, ClienteRepository clienteRepository, SeguradoraRepository seguradoraRepository) {
+    public MunicipioService(EstadoRepository estadoRepository, MunicipioRepository municipioRepository, ModelMapper mapper, ClienteRepository clienteRepository, SeguradoraRepository seguradoraRepository, EntityManager entityManager) {
         this.estadoRepository = estadoRepository;
         this.municipioRepository = municipioRepository;
         this.mapper = mapper;
         this.clienteRepository = clienteRepository;
         this.seguradoraRepository = seguradoraRepository;
+        this.entityManager = entityManager;
+        configureMapper();
     }
 
     @Transactional
     public List<MunicipioDTO> findAll() {
-        List<Municipio> municipios = municipioRepository.findAll();
+        // TODO - Verificar a necesidade de Refatorar as demais classes para Criteria API
+        //      - Excelente Tempo de Resposta primeira consulta 11s depois da tercerira consulta < 3s
+
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Municipio> criteriaQuery = criteriaBuilder.createQuery(Municipio.class);
+
+        Root<Municipio> root = criteriaQuery.from(Municipio.class);
+        criteriaQuery.select(root);
+
+        List<Municipio> municipios = entityManager.createQuery(criteriaQuery).getResultList();
+
+        // List<Municipio> municipios = municipioRepository.searchAll(); //.findAll();
         if (municipios.isEmpty()) {
             throw new ResourceNotFoundException("Não existem municípios cadastrados");
         }
 
-        configureMapper();
         return municipios.stream()
                 .map(municipio -> mapper.map(municipio, MunicipioDTO.class))
                 .sorted(Comparator.comparing(MunicipioDTO::getId))
@@ -56,9 +73,9 @@ public class MunicipioService {
 
     @Transactional(readOnly = true)
     public MunicipioDTO findById(Long id) {
-        configureMapper();
-        return municipioRepository.findById(id)
+        return municipioRepository.searchById(id).stream()//.findById(id)
                 .map(municipio -> mapper.map(municipio, MunicipioDTO.class))
+                .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("ID do Município não encontrado"));
     }
 
@@ -74,7 +91,6 @@ public class MunicipioService {
         Municipio municipio = new Municipio();
         municipio.setDescricao(municipioDTO.getDescricao());
         municipio.setEstado(estado);
-        configureMapper();
         return mapper.map(municipioRepository.save(municipio), MunicipioDTO.class);
     }
 
@@ -93,7 +109,6 @@ public class MunicipioService {
 
         entity.setDescricao(municipioDTO.getDescricao());
         entity.setEstado(estado);
-        configureMapper();
         return mapper.map(municipioRepository.save(entity), MunicipioDTO.class);
     }
 
@@ -123,6 +138,7 @@ public class MunicipioService {
                 map().setId(source.getId());
                 map().setDescricao(source.getDescricao());
                 map().setId_estado(source.getEstado().getId());
+                map().setEstado(source.getEstado());
             }
         });
         mapperAllreadyConfigured = true;

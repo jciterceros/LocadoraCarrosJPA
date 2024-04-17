@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @EqualsAndHashCode
-@ToString(exclude = {"fabricante","carro"})
+@ToString(exclude = {"fabricante", "carro"})
 @Table(name = "tb_modelo")
 public class Modelo {
 
@@ -26,6 +26,6 @@ public class Modelo {
     @JoinColumn(name = "id_fabricante")
     private Fabricante fabricante;
 
-    @OneToMany(mappedBy = "modelo", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "modelo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Carro> carro;
 }
