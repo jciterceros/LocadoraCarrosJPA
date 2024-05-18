@@ -2,6 +2,9 @@ package com.jciterceros.locadoracarrosjpa.controllers;
 
 import com.jciterceros.locadoracarrosjpa.dto.FabricanteDTO;
 import com.jciterceros.locadoracarrosjpa.services.FabricanteService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +24,12 @@ public class FabricanteController {
         this.fabricanteService = fabricanteService;
     }
 
+    @Operation(summary = "Find all fabricantes")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Found all fabricantes"),
+            @ApiResponse(responseCode = "404", description = "Not found fabricantes"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @GetMapping()
     public ResponseEntity<List<FabricanteDTO>> findAll() {
         return ResponseEntity.ok().body(fabricanteService.findAll());
