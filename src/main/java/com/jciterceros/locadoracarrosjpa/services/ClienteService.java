@@ -34,7 +34,7 @@ public class ClienteService {
 
     @Transactional(readOnly = true)
     public List<ClienteDTO> findAll() {
-        List<Cliente> clientes = clienteRepository.searchAll();
+        List<Cliente> clientes = clienteRepository.findAll();//searchAll();
         if (clientes.isEmpty()) {
             throw new ResourceNotFoundException("Não existem clientes cadastrados");
         }

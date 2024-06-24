@@ -1,9 +1,7 @@
 package com.jciterceros.locadoracarrosjpa.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -11,6 +9,9 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 @ToString(exclude = {"carro", "cliente", "seguradora"})
 @Table(name = "tb_locacao")
 public class Locacao {

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,6 +12,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @ToString(exclude = {"clienteTelefones", "clienteLocacoes"})
 @Table(name = "tb_cliente")
 public class Cliente {
@@ -49,9 +51,9 @@ public class Cliente {
     private Municipio municipio;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Clientetelefone> clienteTelefones;
+    private Set<Clientetelefone> clienteTelefones = new HashSet<>();
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Locacao> clienteLocacoes;
+    private Set<Locacao> clienteLocacoes = new HashSet<>();
 
 }

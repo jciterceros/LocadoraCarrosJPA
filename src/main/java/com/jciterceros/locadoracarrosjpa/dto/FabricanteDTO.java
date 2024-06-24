@@ -10,7 +10,7 @@ import lombok.*;
 public class FabricanteDTO {
     private Long id;
 
-//    @JsonIgnore
+    //    @JsonIgnore
     private String nome;
 
 }

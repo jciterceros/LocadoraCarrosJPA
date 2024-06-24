@@ -3,6 +3,7 @@ package com.jciterceros.locadoracarrosjpa.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -10,6 +11,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @ToString(exclude = {"estadoMunicipios", "estadoClientes", "estadoSeguradoras"})
 @Table(name = "tb_estado")
 public class Estado {
@@ -25,12 +27,12 @@ public class Estado {
     private String sigla;
 
     @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Municipio> estadoMunicipios;
+    private Set<Municipio> estadoMunicipios = new HashSet<>();
 
     @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Cliente> estadoClientes;
+    private Set<Cliente> estadoClientes = new HashSet<>();
 
     @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Seguradora> estadoSeguradoras;
+    private Set<Seguradora> estadoSeguradoras = new HashSet<>();
 
 }

@@ -40,7 +40,7 @@ public class SeguradoraService {
 
     @Transactional(readOnly = true)
     public List<SeguradoraDTO> findAll() {
-        List<Seguradora> seguradoras = seguradoraRepository.searchAll();
+        List<Seguradora> seguradoras = seguradoraRepository.findAll();//.searchAll();
         if (seguradoras.isEmpty()) {
             throw new ResourceNotFoundException("Não existem seguradoras cadastradas");
         }

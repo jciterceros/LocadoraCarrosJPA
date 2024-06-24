@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -12,6 +12,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @ToString
 @Table(name = "tb_carro")
 public class Carro {
@@ -42,7 +43,6 @@ public class Carro {
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
 
-    @OneToMany(mappedBy = "carro",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Locacao> locacoes;
-
+    @OneToMany(mappedBy = "carro", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Locacao> locacoes = new HashSet<>();
 }

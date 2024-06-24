@@ -31,7 +31,7 @@ public class EstadoService {
 
     @Transactional(readOnly = true)
     public List<EstadoDTO> findAll() {
-        List<Estado> estados = estadoRepository.searchAll();
+        List<Estado> estados = estadoRepository.findAll();//searchAll();
         if (estados.isEmpty()) {
             throw new ResourceNotFoundException("Não existem estados cadastrados");
         }

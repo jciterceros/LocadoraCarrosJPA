@@ -39,7 +39,8 @@ public class CarroService {
 
     @Transactional(readOnly = true)
     public List<CarroDTO> findAll() {
-        List<Carro> carros = carroRepository.searchAll();//.findAll();
+        List<Carro> carros = carroRepository.findAll();
+                //.searchAll();//.findAll();
         if (carros.isEmpty()) {
             throw new ResourceNotFoundException("Não existem carros cadastrados");
         }

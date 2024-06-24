@@ -10,6 +10,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @ToString(exclude = {"municipioClientes", "municipioSeguradoras"})
 @Table(name = "tb_municipio")
 public class Municipio {

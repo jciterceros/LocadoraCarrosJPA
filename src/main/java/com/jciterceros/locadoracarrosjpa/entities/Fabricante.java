@@ -11,6 +11,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode
 @ToString(exclude = {"modelos", "carro"})
 @Table(name = "tb_fabricante")
